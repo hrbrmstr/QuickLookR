@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4291BEF1D552859001238D2 /* GenerateThumbnailForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.c */; };
-		C4291BF11D552859001238D2 /* GeneratePreviewForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF01D552859001238D2 /* GeneratePreviewForURL.c */; };
+		C4291BEF1D552859001238D2 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.m */; };
+		C4291BF11D552859001238D2 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */; };
 		C4291BF31D552859001238D2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF21D552859001238D2 /* main.c */; };
+		C4291BFB1D552C7A001238D2 /* QuickLookR.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4291BEB1D552859001238D2 /* QuickLookR.qlgenerator */; };
+		C4291C171D552E27001238D2 /* rdata.h in Headers */ = {isa = PBXBuildFile; fileRef = C4291C161D552E27001238D2 /* rdata.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C4291BFA1D552C60001238D2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/QuickLook";
+			dstSubfolderSpec = 0;
+			files = (
+				C4291BFB1D552C7A001238D2 /* QuickLookR.qlgenerator in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C4291BEB1D552859001238D2 /* QuickLookR.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickLookR.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GenerateThumbnailForURL.c; sourceTree = "<group>"; };
-		C4291BF01D552859001238D2 /* GeneratePreviewForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GeneratePreviewForURL.c; sourceTree = "<group>"; };
+		C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		C4291BF21D552859001238D2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C4291BF41D552859001238D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4291C161D552E27001238D2 /* rdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rdata.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +66,11 @@
 		C4291BED1D552859001238D2 /* QuickLookR */ = {
 			isa = PBXGroup;
 			children = (
-				C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.c */,
-				C4291BF01D552859001238D2 /* GeneratePreviewForURL.c */,
+				C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.m */,
+				C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */,
 				C4291BF21D552859001238D2 /* main.c */,
 				C4291BF41D552859001238D2 /* Info.plist */,
+				C4291C161D552E27001238D2 /* rdata.h */,
 			);
 			path = QuickLookR;
 			sourceTree = "<group>";
@@ -65,6 +82,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4291C171D552E27001238D2 /* rdata.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,7 @@
 				C4291BE71D552859001238D2 /* Frameworks */,
 				C4291BE81D552859001238D2 /* Headers */,
 				C4291BE91D552859001238D2 /* Resources */,
+				C4291BFA1D552C60001238D2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -135,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4291BEF1D552859001238D2 /* GenerateThumbnailForURL.c in Sources */,
-				C4291BF11D552859001238D2 /* GeneratePreviewForURL.c in Sources */,
+				C4291BEF1D552859001238D2 /* GenerateThumbnailForURL.m in Sources */,
+				C4291BF11D552859001238D2 /* GeneratePreviewForURL.m in Sources */,
 				C4291BF31D552859001238D2 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +250,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuickLookR/Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLookR",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = is.rud.QuickLookR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -243,6 +266,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuickLookR/Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLookR",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = is.rud.QuickLookR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -268,6 +295,7 @@
 				C4291BF91D552859001238D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
