@@ -1,6 +1,6 @@
 This is a macOS QuickLook Plugin for R data files.
 
-That means if you install this plugin (download and unzip `QuickLookR.qlgenerator.zip` and put `QuickLookR.qlgenerator` into `~/Library/QuickLook`) you can hit the spacebar on an R Data or saved RDS file (`.rdata`, `.rda`, `.rds` are currently supported extensions) and get a `str()` preview without firing up R/RStudio.
+That means if you install this plugin (download and unzip [`QuickLookR.qlgenerator.zip`](https://github.com/hrbrmstr/QuickLookR/releases/tag/v0.1.0) and put `QuickLookR.qlgenerator` into `~/Library/QuickLook`) you can hit the spacebar on an R Data or saved RDS file (`.rdata`, `.rda`, `.rds` are currently supported extensions) and get a `str()` preview without firing up R/RStudio.
 
 It looks for `Rscript` in `/usr/local/bin` and (for now) requires a helper package [`rdatainfo`](https://github.com/hrbrmstr/rdatainfo). `devtools::install_github("hrbrmstr/rdatainfo")` to install that.
 
