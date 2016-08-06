@@ -11,7 +11,6 @@
 		C4291BF11D552859001238D2 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */; };
 		C4291BF31D552859001238D2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF21D552859001238D2 /* main.c */; };
 		C4291BFB1D552C7A001238D2 /* QuickLookR.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4291BEB1D552859001238D2 /* QuickLookR.qlgenerator */; };
-		C4291C171D552E27001238D2 /* rdata.h in Headers */ = {isa = PBXBuildFile; fileRef = C4291C161D552E27001238D2 /* rdata.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +32,6 @@
 		C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		C4291BF21D552859001238D2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C4291BF41D552859001238D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4291C161D552E27001238D2 /* rdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rdata.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 				C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */,
 				C4291BF21D552859001238D2 /* main.c */,
 				C4291BF41D552859001238D2 /* Info.plist */,
-				C4291C161D552E27001238D2 /* rdata.h */,
 			);
 			path = QuickLookR;
 			sourceTree = "<group>";
@@ -82,7 +79,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4291C171D552E27001238D2 /* rdata.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

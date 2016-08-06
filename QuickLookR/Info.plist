@@ -17,9 +17,9 @@
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
-          <string>GGG</string>
-          <string>RData</string>
+          <string>rdata</string>
           <string>rda</string>
+          <string>rds</string>
 				</array>
 			</dict>
 		</dict>
@@ -38,9 +38,9 @@
     <dict>
       <key>public.filename-extension</key>
       <array>
-        <string>GGG</string>
-        <string>RData</string>
+        <string>rdata</string>
         <string>rda</string>
+        <string>rds</string>
       </array>
     </dict>
 	</array>
