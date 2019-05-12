@@ -43,6 +43,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
       cmd = [ cmd stringByAppendingString: contents ] ;
       cmd = [ cmd stringByAppendingString: @"')" ] ;
       
+      NSLog(@"Running: %@", cmd) ;
+
       NSTask *task = [ [ NSTask alloc ] init] ;
       task.launchPath = @"/usr/local/bin/Rscript";
       task.arguments = @[ @"-e", cmd ];
