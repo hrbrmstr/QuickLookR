@@ -10,7 +10,7 @@
 		C4291BEF1D552859001238D2 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4291BEE1D552859001238D2 /* GenerateThumbnailForURL.m */; };
 		C4291BF11D552859001238D2 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF01D552859001238D2 /* GeneratePreviewForURL.m */; };
 		C4291BF31D552859001238D2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C4291BF21D552859001238D2 /* main.c */; };
-		C4291BFB1D552C7A001238D2 /* QuickLookR.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4291BEB1D552859001238D2 /* QuickLookR.qlgenerator */; };
+		C4291BFB1D552C7A001238D2 /* QuickLookR.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4291BEB1D552859001238D2 /* QuickLookR.qlgenerator */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -275,7 +275,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CBY22P58G8;
 				INFOPLIST_FILE = QuickLookR/Info.plist;
-				INSTALL_PATH = "~/Library/QuickLook";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QuickLookR",
@@ -295,7 +294,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CBY22P58G8;
 				INFOPLIST_FILE = QuickLookR/Info.plist;
-				INSTALL_PATH = "~/Library/QuickLook";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QuickLookR",
