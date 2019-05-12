@@ -17,33 +17,52 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     
     NSURL *myURL = (__bridge NSURL *)url ;
     
+    NSString *ext = [ [ myURL pathExtension ] lowercaseString ];
+    
     NSString *contents = [ myURL absoluteString ] ;
     
     NSLog(@"Generating preview for %@", contents) ;
+    
+    if ([ ext isEqualToString: @"rmd" ]) {
 
-    NSPipe *pipe = [ NSPipe pipe ] ;
-    NSFileHandle *file = pipe.fileHandleForReading ;
+      QLPreviewRequestSetURLRepresentation(
+        preview,
+        url,
+        kUTTypePlainText,
+        NULL
+      );
+      
+      return noErr;
+
+    } else {
+
+      NSPipe *pipe = [ NSPipe pipe ] ;
+      NSFileHandle *file = pipe.fileHandleForReading ;
+      
+      NSString *cmd = @"rdatainfo::get_info('" ;
+      cmd = [ cmd stringByAppendingString: contents ] ;
+      cmd = [ cmd stringByAppendingString: @"')" ] ;
+      
+      NSTask *task = [ [ NSTask alloc ] init] ;
+      task.launchPath = @"/usr/local/bin/Rscript";
+      task.arguments = @[ @"-e", cmd ];
+      task.standardOutput = pipe;
+      
+      [task launch];
+      
+      NSData *data = [ file readDataToEndOfFile ] ;
+      [ file closeFile ];
+      
+      NSString *rOutput = [ [ NSString alloc ] initWithData: data encoding: NSUTF8StringEncoding ] ;
     
-    NSString *cmd = @"rdatainfo::get_info('" ;
-    cmd = [ cmd stringByAppendingString: contents ] ;
-    cmd = [ cmd stringByAppendingString: @"')" ] ;
-    
-    NSTask *task = [ [ NSTask alloc ] init] ;
-    task.launchPath = @"/usr/local/bin/Rscript";
-    task.arguments = @[ @"-e", cmd ];
-    task.standardOutput = pipe;
-    
-    [task launch];
-    
-    NSData *data = [ file readDataToEndOfFile ] ;
-    [ file closeFile ];
-    
-    NSString *rOutput = [ [ NSString alloc ] initWithData: data encoding: NSUTF8StringEncoding ] ;
-    
-    if (false == QLPreviewRequestIsCancelled(preview)) {
-      QLPreviewRequestSetDataRepresentation(preview,
-                                            (__bridge CFDataRef)([ rOutput dataUsingEncoding:NSUTF8StringEncoding ]),
-                                            kUTTypePlainText, NULL) ;
+      if (false == QLPreviewRequestIsCancelled(preview)) {
+        QLPreviewRequestSetDataRepresentation(
+          preview,
+          (__bridge CFDataRef)([ rOutput dataUsingEncoding:NSUTF8StringEncoding ]),
+          kUTTypePlainText, NULL
+        ) ;
+      }
+      
     }
     
   }
